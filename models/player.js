@@ -1,0 +1,11 @@
+const mongoose = require('mongoose');
+const config = require('../config/database');
+
+//PLAYER SCHEMA
+const PlayerSchema = mongoose.Schema({
+	name: String,
+	time: Number,
+	turns: Number,
+});
+
+module.exports = mongoose.model('Player', PlayerSchema);

@@ -1,0 +1,27 @@
+{
+	"name": "memorygameredo",
+	"version": "1.0.0",
+	"description": "A memory game made using Angular",
+	"main": "server.js",
+	"scripts": {
+		"test": "test",
+		"start": "nodemon app"
+	},
+	"dependencies": {
+		"body-parser": "*",
+		"cors": "*",
+		"express": "*",
+		"mongoose": "*",
+		"nodemon": "^1.19.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/Wonder13oy/Memory-Game-Angular.git"
+	},
+	"author": "Wandile Nxumalo",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Wonder13oy/Memory-Game-Angular/issues"
+	},
+	"homepage": "https://github.com/Wonder13oy/Memory-Game-Angular#readme"
+}
