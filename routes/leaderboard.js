@@ -7,12 +7,12 @@ const player = new handler();
 
 //TIME LEADERBOARD
 router.get('/time', (req, res, next) => {
-	res.send('Times Leaderboard');
+	player.getTimeLeaderboard(req, res);
 });
 
 //CLICKS LEADERBOARD
 router.get('/turns', (req, res, next) => {
-	res.send('Clicks Leaderboard');
+	player.getTurnsLeaderboard(req, res);
 });
 
 //ADD PLAYER STATS

@@ -4,7 +4,7 @@ const config = require('../config/database');
 //PLAYER SCHEMA
 const PlayerSchema = mongoose.Schema({
 	name: String,
-	time: Number,
+	time: String,
 	turns: Number,
 });
 

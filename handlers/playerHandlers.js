@@ -17,6 +17,26 @@ function handler() {
 			res.json({ success: false, msg: 'Failed to register player' });
 		}
 	};
+
+	this.getTimeLeaderboard = async (req, res) => {
+		try {
+			const stats = await Player.find().sort({ time: 1 }).limit(10);
+			console.log('get Leaderboard');
+			res.json(stats);
+		} catch (error) {
+			res.json({ success: false, msg: 'Empty Leaderboard' });
+		}
+	};
+
+	this.getTurnsLeaderboard = async (req, res) => {
+		try {
+			const stats = await Player.find().sort({ turns: -1 });
+			console.log('get Leaderboard');
+			res.json(stats);
+		} catch (error) {
+			res.json({ success: false, msg: 'Empty Leaderboard' });
+		}
+	};
 }
 
 module.exports = handler;
