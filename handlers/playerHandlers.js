@@ -20,7 +20,9 @@ function handler() {
 
 	this.getTimeLeaderboard = async (req, res) => {
 		try {
-			const stats = await Player.find().sort({ time: 1 }).limit(10);
+			const stats = await Player.find()
+				.sort({ time: 1 })
+				.limit(10);
 			console.log('get Leaderboard');
 			res.json(stats);
 		} catch (error) {
@@ -31,7 +33,6 @@ function handler() {
 	this.getTurnsLeaderboard = async (req, res) => {
 		try {
 			const stats = await Player.find().sort({ turns: -1 });
-			console.log('get Leaderboard');
 			res.json(stats);
 		} catch (error) {
 			res.json({ success: false, msg: 'Empty Leaderboard' });
